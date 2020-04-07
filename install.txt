@@ -2,3 +2,5 @@
 2. npm install validator
 3. npm install chalk
 4. npm install yargs
+
+** para usar yargs correctamente (espacios) node app.js add --title= "titulo" --body= "cuerpo"
