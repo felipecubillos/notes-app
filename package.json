@@ -1,0 +1,24 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "note app is an application for learn and practice node js. --> personal use.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipecubillos/notes-app.git"
+  },
+  "author": "Andres Cubillos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipecubillos/notes-app/issues"
+  },
+  "homepage": "https://github.com/felipecubillos/notes-app#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "validator": "^13.0.0",
+    "yargs": "^15.3.1"
+  }
+}
