@@ -1,4 +1,6 @@
 const yargs = require('yargs');
+const chalk = require('chalk');
+const notes = require('./notes.js');
 
 yargs.version("1.3");
 
@@ -20,6 +22,7 @@ yargs
         function (yargs) {
             console.log('Note added : ' + yargs.title);
             console.log(' the body of the note is : '+ yargs.body);
+            notes.addNotes(yargs.title,yargs.body);
         }
     );
 
@@ -37,8 +40,9 @@ yargs
                 }
             )
         },
-        function () {
-            console.log(' note deleted: ' + yargs.title)
+        function (yargs) {
+            notes.removeNote(yargs.title);
+            //console.log(' note deleted: ' + yargs.title)
         }
     );
 
