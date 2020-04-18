@@ -46,8 +46,27 @@ const removeNote = (title) => {
   }
 };
 
+const listNotes = () =>{
+  const notes = loadNotes();
+  return notes.forEach(note => {
+    console.log(note.title)
+  });
+}
+const readNote = (title) =>{
+  const notes = loadNotes();
+  const note = notes.find((note)=> note.title === title );
+if (note) {
+  console.log(chalk.inverse(note.body));
+} else {
+  console.log(chalk.red.inverse('note not found'));
+}
+
+}
+
 module.exports = {
   getNotes: getNotes,
   addNotes: addNotes,
   removeNote: removeNote,
+  listNotes: listNotes,
+  readNote: readNote
 };

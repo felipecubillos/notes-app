@@ -61,25 +61,20 @@ yargs
             )
         },
          (yargs) => {
-            console.log(' title readed : ' + yargs.title)
+            //console.log(' title readed : ' + yargs.title)
+           notes.readNote(yargs.title);
         }
     );
 
 // list notes
 yargs
     .command(
-        'list <title>',
+        'list',
         'list a note ',
-        (yargs) => {
-            yargs.positional('title',
-                {
-                    describe: 'a title to list ',
-                    type: 'string'
-                }
-            )
-        },
+        
          (yargs) =>{
-            console.log(' note listed: ' + yargs.title)
+          //  console.log(' note listed: ' + yargs.title)
+          notes.listNotes();
         }
     );
 yargs.parse();
