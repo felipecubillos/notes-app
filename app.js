@@ -19,7 +19,7 @@ yargs
              type: 'string'    
         })
         },
-        function (yargs) {
+         (yargs) => {
             console.log('Note added : ' + yargs.title);
             console.log(' the body of the note is : '+ yargs.body);
             notes.addNotes(yargs.title,yargs.body);
@@ -31,7 +31,7 @@ yargs
     .command(
         'remove <title>',
         'remove a note ',
-        function (yargs) {
+         (yargs) => {
             yargs.positional(
                 'title',
                 {
@@ -40,7 +40,7 @@ yargs
                 }
             )
         },
-        function (yargs) {
+         (yargs) => {
             notes.removeNote(yargs.title);
             //console.log(' note deleted: ' + yargs.title)
         }
@@ -60,7 +60,7 @@ yargs
                 }
             )
         },
-        function (yargs) {
+         (yargs) => {
             console.log(' title readed : ' + yargs.title)
         }
     );
@@ -78,7 +78,7 @@ yargs
                 }
             )
         },
-        function (yargs) {
+         (yargs) =>{
             console.log(' note listed: ' + yargs.title)
         }
     );
